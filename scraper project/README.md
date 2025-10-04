@@ -1,21 +1,31 @@
-Book Scraper (Books to Scrape)
+📌 Постановка задачи
 
-This project is a simple web scraper written in Python that extracts book information from Books to Scrape.
-It collects details such as:
-    Title
-    Rating (converted into stars ⭐)
-    Price
-    Availability
-and saves the results into an Excel file (books.xlsx).
+Необходимо разработать скрипт на Python, который автоматически собирает данные о книгах с учебного сайта Books to Scrape
+.
+Скрипт должен:
 
-🚀 Features
+проходить по всем страницам каталога,
 
-Scrapes all pages from books.toscrape.com.
-Extracts book details using BeautifulSoup.
-Converts textual ratings (One, Two, etc.) into star symbols (★).
-Stores results in an Excel file using pandas.
+извлекать название книги, рейтинг, цену и наличие на складе,
 
-🛠️ Requirements
+преобразовывать рейтинг (например, Three) в звёздочки (★★★),
 
-Install the dependencies before running the script:
+сохранять результаты в таблицу Excel (books.xlsx).
+
+🛠️ Инструкция по сборке и запуску
+1. Установка зависимостей
+
+Убедитесь, что у вас установлен Python (>=3.8).
+Установите необходимые библиотеки:
+
 pip install requests beautifulsoup4 pandas openpyxl
+
+2. Сборка
+
+Файл скрипта можно назвать, например, scraper.py. В нём должен быть размещён код с функцией collect_info() и сохранением результатов в Excel.
+
+3. Запуск
+
+Выполните команду в терминале:
+
+python scraper.py
